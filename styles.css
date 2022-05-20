@@ -26,6 +26,83 @@ body {
     
 }
 .container {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    
+    width: clamp(16rem, 90vw, 100rem);
+    margin: 0 1rem;
+    gap: 2rem;
+    position: relative;
+    top: 20px
+}
+.img-card {
+    border: 1px solid green;
+    border-radius: 5px 100px 5px 5px;
+    width: 40%;
+    position: relative;
+    height: 15rem;
+    
+    
+}
+.img-card .logo{
+    padding: 2rem 1rem;
+    /* width: clamp(1rem, 10vw, 2rem); */
+    width: clamp(10rem, 15vw, 15rem);
+   
+}
+.img-card .icon-list{
+    display: flex;
+    height: 25%;
+    width: clamp(10rem, 15vw, 15rem);
+}
+.img-card .icon-list .icon{
+    padding: .75rem;
+    background-color: var(--very-dark-blue);
+    border-radius: 5px;
+}
+.icon-list, .floating-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.info-card {
+    border: 1px solid yellow;
+    width: 60%;
+    position: relative;
+    height: 12rem;
+    align-self: flex-end;
+    border-radius: 5px;
+    
+}
+.num-range {
+    display: flex;
+    justify-content: space-between;
+}
+.floating-card {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    color: black;
+    background-color: white;
+    padding: 1rem 3rem;
+}
+.card {
+    background-color: var(--dark-blue);
+    padding: 2rem;
+    width: 100%;
+}
+
+    
+    
+   
+   
+    
+
+/* .container {
     width: 80%;
     height: 30%;
     border: 1px solid red;
