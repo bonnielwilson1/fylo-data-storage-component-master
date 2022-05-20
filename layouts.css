@@ -1,0 +1,60 @@
+:root {
+    --content-width: 50ch;
+  }
+
+  body {
+      margin: 0;
+  }
+  figure {
+      margin: 0;
+  }
+  img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+  }
+header {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem;
+    max-width: calc(var(--content-width) - 4rem);
+}
+.card button {
+    padding: 0.75rem 1rem;
+    border: 0.25rem solid black;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  
+  
+
+  
+
+  
+  .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  }
+  
+  .card {
+  border: .5rem solid black;
+  flex: 1 1 clamp(20ch, calc(1/4 *100%), 100%);
+  }
+  /* clamp defines the smallest size, the desired size, and the largest size. so smallest is 20ch, 50% of available space, and max is the assigned content width which is 50ch */
+  
+  .card figcaption {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem 2rem;
+
+  }
+  
+  .card h2 {
+  
+  }
+  
+ */

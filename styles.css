@@ -19,17 +19,19 @@
 }
 body {
     height: 100vh;
-    background: var(--very-dark-blue )url(/images/bg-desktop.png) no-repeat;
-    background-position: bottom left;
-    background-size:contain;
+    background: var(--very-dark-blue ) url(/images/bg-desktop.png) no-repeat;
+    background-position: bottom ;
+    background-size:100vw 50vh;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    color: var(--pale-blue);
+    padding: 0 2rem;
+
 }
 .container {
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 2fr 3fr;
-    
     width: clamp(16rem, 90vw, 100rem);
     margin: 0 1rem;
     gap: 2rem;
@@ -37,31 +39,39 @@ body {
     top: 20px
 }
 .img-card {
-    border: 1px solid green;
     border-radius: 5px 100px 5px 5px;
-    width: 40%;
     position: relative;
-    height: 15rem;
-    
-    
 }
 .img-card .logo{
-    padding: 2rem 1rem;
-    /* width: clamp(1rem, 10vw, 2rem); */
+    padding: 2rem 1.5rem;
     width: clamp(10rem, 15vw, 15rem);
    
 }
 .img-card .icon-list{
     display: flex;
-    height: 25%;
+    flex-direction: row;
     width: clamp(10rem, 15vw, 15rem);
+    padding-left: 1.5rem;
+    gap: 1.5rem;
+
+    /* background-color: var(--very-dark-blue); */
 }
-.img-card .icon-list .icon{
-    padding: .75rem;
+.img-card .icon-list .icon {
+    /* height: 2rem;
+    width: 3rem; */
+    padding: 1rem;
+    width: clamp(2.5rem, 5vw, 5rem);
+    position: relative;
     background-color: var(--very-dark-blue);
+    list-style: none;
+    display: flex;
+    align-items: center;
     border-radius: 5px;
+    padding: 1.5rem;
+    justify-content: center;
+
 }
-.icon-list, .floating-list {
+.icon-list {
     list-style: none;
     display: flex;
     align-items: center;
@@ -70,33 +80,114 @@ body {
 }
 
 .info-card {
-    border: 1px solid yellow;
+
     width: 60%;
     position: relative;
-    height: 12rem;
+    height: 14rem;
     align-self: flex-end;
     border-radius: 5px;
     
+  
 }
 .num-range {
     display: flex;
     justify-content: space-between;
+    padding: 0 2rem;
+    font-weight: var(--bold);
 }
+
+.progress-bar{
+    background-color: var(--very-dark-blue);
+    height: 35px;
+    margin:  0rem 2rem 1rem 2rem;
+    border-radius: 90px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+
+
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    
+}
+.progress-bar .bar-color{
+background-image: linear-gradient(90deg,  hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+border-radius: 90px;
+height: 25px;
+width: 80%;
+position:  absolute;
+z-index: 998;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-left: 5px;
+
+}
+.progress-bar .bar-color .bar-ball{
+    background-color: var(--pale-blue);
+    height: 22px;
+    /* position: absolute; */
+    width: 22px;
+    border-radius: 50%;
+    margin-right: 2px;;
+
+
+}
+
 .floating-card {
     position: absolute;
-    top: -20px;
-    right: 0;
+    top: -30%;
+    right: 4rem;
     color: black;
     background-color: white;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
+    display: flex;
+    border-radius: 10px;
+    border-right: 25px solid white;
+    border-bottom: 25px solid var(--dark-blue);
+
 }
+ .floating-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+   gap: .25rem;
+
+    
+}
+
+
+.floating-card .floating-list li{
+    font-weight: var(--bold);
+    font-size: 4rem;
+}
+.floating-card .floating-list li:nth-child(4){
+    font-weight: var(--normal);
+    font-size: 1rem;
+    margin-left: 1rem;
+    }
+
+
 .card {
     background-color: var(--dark-blue);
     padding: 2rem;
     width: 100%;
 }
 
+.info-card h1{
+    font-size: clamp(1rem, 20px, 2rem);
+    font-weight: 400;
+    padding: 1rem 2rem;
     
+}
+.info-card h1 span {
+    font-weight: var(--bold);
+    font-size: clamp(1.5rem, 24px, 2.5em);
+}
     
    
    
@@ -106,10 +197,9 @@ body {
     width: 80%;
     height: 30%;
     border: 1px solid red;
-    margin:  auto;
+    margin:  auto; */
     
  
     
 
 
-}
