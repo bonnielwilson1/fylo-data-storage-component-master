@@ -144,18 +144,21 @@ margin-left: 5px;
     right: 4rem;
     color: black;
     background-color: white;
-    padding: 1rem 1rem;
-    display: flex;
+    padding:1rem 0 1rem 1rem;
+   
     border-radius: 10px;
     border-right: 25px solid white;
     border-bottom: 25px solid var(--dark-blue);
-
+   
+ 
 }
  .floating-list {
     list-style: none;
     display: flex;
     align-items: center;
-   gap: .25rem;
+    
+   gap: .2rem;
+   
 
     
 }
@@ -168,7 +171,8 @@ margin-left: 5px;
 .floating-card .floating-list li:nth-child(4){
     font-weight: var(--normal);
     font-size: 1rem;
-    margin-left: 1rem;
+    margin-left: .65rem;
+    padding-right: 0;
     }
 
 
@@ -182,24 +186,91 @@ margin-left: 5px;
     font-size: clamp(1rem, 20px, 2rem);
     font-weight: 400;
     padding: 1rem 2rem;
-    
+    position: relative;
+    z-index: 999;
 }
 .info-card h1 span {
     font-weight: var(--bold);
     font-size: clamp(1.5rem, 24px, 2.5em);
 }
     
-   
-   
-    
 
-/* .container {
-    width: 80%;
-    height: 30%;
-    border: 1px solid red;
-    margin:  auto; */
-    
+/* media quearie for mobile  */
+
+@media screen and (max-width:950px) {
+    body {
+        background: var(--very-dark-blue ) url(/images/bg-mobile.png) no-repeat ;
+        background-position: center;
+        
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
  
     
+     .container {
+        display: flex;
+        flex-direction: column;    
+}
 
+.floating-card {
+    position: absolute;
+    top: 85%;
+   right: 25%;
+   left: 25%;
+    
+    margin: 0 auto;
+    color: black;
+    background-color: white;
+    padding: 1rem 0;
+    border-radius: 10px;
+    border-right: none;
+    border-bottom: none;
 
+ 
+}
+.floating-card .floating-list {
+    justify-content: center;
+}
+.floating-card .floating-list li{
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    
+}
+.info-card h1 {
+    font-size: .9rem;
+    text-align: center;
+}
+.info-card h1 span {
+    font-size: 1rem;
+   
+}
+.info-card, .img-card{
+    padding: 2rem 1rem;;
+    margin: 0;
+    
+
+}
+.img-card .logo, .img-card .icon-list{
+    margin-left: 3.5rem;
+}
+.img-card .icon-list .icon{
+    width: auto;
+    padding: 1rem;
+    
+}
+.img-card .icon-list{
+    gap: 1rem;
+}
+/* 
+    width: 60%;
+    position: relative;
+    height: 14rem;
+    align-self: flex-end;
+    border-radius: 5px;
+     */
+  
+
+     
+}
